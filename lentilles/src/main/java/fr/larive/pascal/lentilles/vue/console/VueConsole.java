@@ -1,4 +1,4 @@
-package fr.larive.pascal.lentilles.vue;
+package fr.larive.pascal.lentilles.vue.console;
 
 import java.util.List;
 
