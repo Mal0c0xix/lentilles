@@ -39,6 +39,12 @@ public class Lentille {
 		this.periodicite = periodicite;
 		this.prix = prix;
 	}
+	
+	
+
+	public String getReference() {
+		return reference;
+	}
 
 	public String getMatiere() {
 		return matiere;
