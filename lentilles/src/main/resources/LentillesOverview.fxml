@@ -6,6 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.larive.pascal.lentilles.vue.fxml.vue.LentilleOverviewController">
    <children>
@@ -19,14 +20,60 @@
                      </image></ImageView>
                   <ButtonBar layoutX="255.0" layoutY="148.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="100.0">
                      <buttons>
-                        <ComboBox prefWidth="150.0" />
-                        <ComboBox prefWidth="150.0" />
-                        <ComboBox prefWidth="150.0" />
-                        <ComboBox prefWidth="150.0" />
-                        <ComboBox prefWidth="150.0" />
+                        <ComboBox fx:id="matiereBox" prefWidth="150.0">
+                         <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Matière" />
+                                    <String fx:value="Silicone" />
+                                    <String fx:value="Hydrogel" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="Matière" />
+                            </value>
+                        </ComboBox>
+                        <ComboBox fx:id="segmentBox" prefWidth="150.0">
+	                        <items>
+	                                <FXCollections fx:factory="observableArrayList">
+	                                    <String fx:value="Segment" />
+	                                    <String fx:value="Progressive" />
+	                                    <String fx:value="Sphérique" />
+	                                    <String fx:value="Torique" />
+	                                </FXCollections>
+	                            </items>
+	                            <value>
+	                                <String fx:value="Segment" />
+	                            </value>
+                        </ComboBox>
+                        <ComboBox fx:id="periodiciteBox" prefWidth="150.0">
+                        	<items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Périodicité" />
+                                    <String fx:value="Journalière" />
+                                    <String fx:value="Mensuelle" />
+                                    <String fx:value="Traditionnelle" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="Périodicité" />
+                            </value>
+                        </ComboBox>
+                        <ComboBox fx:id="prixBox" prefWidth="150.0">
+                        	<items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Prix" />
+                                    <String fx:value="Premium" />
+                                    <String fx:value="Bien" />
+                                    <String fx:value="Meilleur" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="Prix" />
+                            </value>
+                        </ComboBox>
                      </buttons>
                   </ButtonBar>
-                  <Button layoutX="719.0" layoutY="216.0" mnemonicParsing="false" text="Filtrer" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="32.0" />
+                  <Button fx:id="filterButton" layoutX="719.0" layoutY="216.0" mnemonicParsing="false" text="Filtrer" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="32.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
